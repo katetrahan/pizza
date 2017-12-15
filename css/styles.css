@@ -1,9 +1,11 @@
 #show-price {
   display: none;
+  background-color: #FAEBD7;
 }
 
 .jumbotron {
   text-align: center;
+  background-image: url("https://www.vortexglobal.com/wp-content/uploads/2017/10/pepperoni-pizza.jpg")
 }
 
 button {
@@ -18,4 +20,24 @@ button {
 .yummypizza:hover {
   text-decoration: underline;
   column-rule-color: grey;
+}
+
+body {
+  background-color:#DEB887;
+}
+
+ul {
+  list-style: none;
+}
+
+.type-of-pizza {
+  color: red;
+  font-style: italic;
+  font-size: 30pt;
+}
+
+.extraToppings {
+  font-style: italic;
+  font-size: 30pt;
+
 }

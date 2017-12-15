@@ -11,9 +11,9 @@ function Pizza(main, extra, size) {
 
 Pizza.prototype.price = function() {
   // debugger;
-  if(this.size === "small") {
+  if(this.size === "Small") {
     var pizzaPrice = smallPrice;
-  } else if(this.size ==="large") {
+  } else if(this.size ==="Large") {
     var pizzaPrice = largePrice;
   } else {
      var pizzaPrice = price;
@@ -34,17 +34,18 @@ $(document).ready(function() {
 
   var newPizza = new Pizza (inputtedMain,inputtedExtra,inputtedSize);
   var finalPrice = newPizza.price();
-  $("ul#show-price").append("<li><span class = 'yummypizza'>" + newPizza.main + "<span></li>");
+  $("ul#show-price").append("<li><span class = 'yummypizza'>" + "View Details" + "<span></li>");
 
+  var result = newPizza.price();
   $("#show-price").show();
-  $("#show-price").append("Your price is: " + "$" + finalPrice);
+  $(".header1").text(newPizza.main);
+ $("#show-price").append("Your price is: " + "$" + result);
   $(".yummypizza").last().click(function() {
     $("show-price").fadeIn();
-    $("show-price h2").text(newPizza.main);
     $(".type-of-pizza").text(newPizza.main);
     $(".extraToppings").text(newPizza.extra);
     $(".sizeOfPizza").text(newPizza.size);
-    $("price").text(finalPrice);
+    $(".price").text(finalPrice);
     });
   });
 });
