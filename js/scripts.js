@@ -8,7 +8,7 @@ var extraTopping = 11;
 function Pizza(main, extra, more, size) {
   this.main = main;
   this.extra = extra;
-  this.more = more;
+  this.more = true;
   this.size = size;
 }
 
@@ -19,14 +19,20 @@ Pizza.prototype.price = function() {
   } else if(this.size ==="Large") {
     var pizzaPrice = largePrice;
   } else {
-     var pizzaPrice = price;
-   }
-
-  if(this.more === "Pineapple") {
-    var pizzaPrice = extraTopping
-  } else if (this.more === "No"){
-    var pizzaPrice = pizzaPrice
+    var pizzaPrice = price;
   }
+
+Pizza.prototype.topper = function() {
+  if(this.more === "Pineapple") {
+    this.more = false;
+  }
+}
+// Pizza.prototype.topper = function() {
+//   if(this.more === "Pineapple") {
+//     var pizzaPrice = extraTopping
+//   } else if (this.more === "No"){
+//     var pizzaPrice = pizzaPrice
+//   }
 
   return pizzaPrice;
 }
@@ -57,6 +63,8 @@ $(document).ready(function() {
     $(".moreToppings").text(newPizza.more);
     $(".sizeOfPizza").text(newPizza.size);
     $(".price").text(finalPrice);
+
+
     });
   });
 });
