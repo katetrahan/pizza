@@ -2,31 +2,40 @@
 var smallPrice = 8;
 var price = 10;
 var largePrice = 12;
-var extraTopping = 11;
+var extraTopping = 2;
 
 
 function Pizza(main, extra, more, size) {
   this.main = main;
   this.extra = extra;
-  this.more = true;
+  this.more = more;
   this.size = size;
 }
 
 Pizza.prototype.price = function() {
   // debugger;
-  if(this.size === "Small") {
+  // if(this.size === "Small") {
+  //   var pizzaPrice = smallPrice;
+  // } else if(this.size ==="Large") {
+  //   var pizzaPrice = largePrice;
+  // }
+  if(this.more === "Yes" &&  this.size === "Small"){
+    var pizzaPrice = smallPrice + extraTopping;
+  } else if(this.more === "Yes" && this.size === "Medium"){
+    var pizzaPrice = price + extraTopping;
+  } else if(this.more === "Yes" && this.size === "Large"){
+    var pizzaPrice = largePrice + extraTopping;
+  } else if(this.more !== "Yes" && this.size === "Small"){
     var pizzaPrice = smallPrice;
-  } else if(this.size ==="Large") {
+  } else if(this.more !== "Yes" && this.size === "Medium"){
+    var pizzaPrice = price;
+  } else if(this.more !== "Yes" && this.size === "Large"){
     var pizzaPrice = largePrice;
   } else {
-    var pizzaPrice = price;
-  }
+    // var pizzaPrice = price;
+  } return pizzaPrice;
 
-Pizza.prototype.topper = function() {
-  if(this.more === "Pineapple") {
-    this.more = false;
-  }
-}
+
 // Pizza.prototype.topper = function() {
 //   if(this.more === "Pineapple") {
 //     var pizzaPrice = extraTopping
@@ -34,7 +43,7 @@ Pizza.prototype.topper = function() {
 //     var pizzaPrice = pizzaPrice
 //   }
 
-  return pizzaPrice;
+
 }
 
 
@@ -42,10 +51,11 @@ Pizza.prototype.topper = function() {
 $(document).ready(function() {
   $("#pizzaForm").submit(function(event) {
     event.preventDefault();
+    debugger;
 
   var inputtedMain = $("#mainToppingDropdown").val();
   var inputtedExtra = $("#extraToppingDropdown").val();
-  var inputtedMore = $("moreToppingDropdown").val();
+  var inputtedMore = $("#moreToppingDropdown").val();
   var inputtedSize = $("input[name=size]:checked").val();
 
   var newPizza = new Pizza (inputtedMain,inputtedExtra, inputtedMore,inputtedSize);

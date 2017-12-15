@@ -16,6 +16,8 @@ _This is an HTML page that uses JavaScript to take and input from a user and ret
 | **It returns two words**|"Pepperoni, Olives" |"Pepperoni,Olives"|
 | **It returns three words**|"Pepperoni,Olives,Small"|"Pepperoni, Olives, Small"|
 | **It returns price**|"Price"|"$10"|
+| **It returns price of sized item**|"Small"|"$8"
+| **It returns price of sized item with additions |"Small + topping"|"$10"|
 | **It returns four words** | "Pepperoni, Olives, Small, Price " | "Pepperoni, Olives, Small, Price"|
 ## Setup/Installation Requirements
 
