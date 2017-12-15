@@ -2,10 +2,13 @@
 var smallPrice = 8;
 var price = 10;
 var largePrice = 12;
+var extraTopping = 11;
 
-function Pizza(main, extra, size) {
+
+function Pizza(main, extra, more, size) {
   this.main = main;
   this.extra = extra;
+  this.more = more;
   this.size = size;
 }
 
@@ -19,6 +22,12 @@ Pizza.prototype.price = function() {
      var pizzaPrice = price;
    }
 
+  if(this.more === "Pineapple") {
+    var pizzaPrice = extraTopping
+  } else if (this.more === "No"){
+    var pizzaPrice = pizzaPrice
+  }
+
   return pizzaPrice;
 }
 
@@ -30,9 +39,10 @@ $(document).ready(function() {
 
   var inputtedMain = $("#mainToppingDropdown").val();
   var inputtedExtra = $("#extraToppingDropdown").val();
+  var inputtedMore = $("moreToppingDropdown").val();
   var inputtedSize = $("input[name=size]:checked").val();
 
-  var newPizza = new Pizza (inputtedMain,inputtedExtra,inputtedSize);
+  var newPizza = new Pizza (inputtedMain,inputtedExtra, inputtedMore,inputtedSize);
   var finalPrice = newPizza.price();
   $("ul#show-price").append("<li><span class = 'yummypizza'>" + "View Details" + "<span></li>");
 
@@ -44,6 +54,7 @@ $(document).ready(function() {
     $("show-price").fadeIn();
     $(".type-of-pizza").text(newPizza.main);
     $(".extraToppings").text(newPizza.extra);
+    $(".moreToppings").text(newPizza.more);
     $(".sizeOfPizza").text(newPizza.size);
     $(".price").text(finalPrice);
     });
