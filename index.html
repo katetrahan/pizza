@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <form  id="pizzaForm">
+        <div class="jumbotron">
+        <h1>Pizza</h1>
+        </div>
+
+          <div class="col-lg-12">
+            <h4>Pick a topping you would like (main topping):</h4>
+            <select class="form-control" id="mainToppingDropdown">
+              <option value="cheese">Cheese</option>
+              <option value="pepperoni">Pepperoni</option>
+              <option value="meat">Meat(Supreme)</option>
+              <option value="veggie">Veggie</option>
+            </select>
+          </div>
+        </br>
+
+          <div class="col-lg-12" id="extraInput">
+          <h4>What additional toppings would you like?</h4>
+          <select class="form-control" id="extraToppingDropdown">
+            <option value="pineapple">Pineapple</option>
+            <option value="jalapenos">Jalapenos</option>
+            <option value="extra">Extra Cheese</option>
+            <option value="olives">Olives</option>
+          </select>
+          </div>
+
+      </br>
+
+          <div class="col-lg-12" id="timeInput">
+          <h4>What size of pizza would you like?<h4>
+            <input type="radio" name="size" value="small">Small<br>
+            <input type="radio" name="size" value="medium">Medium<br>
+            <input type="radio" name="size" value="large">Large</br>
+          </div>
+
+      </br>
+        <button type="submit" class="btn btn-primary">Price</button>
+      </form>
+    </br>
+      <div class="col-lg-12">
+        <ul id="show-price">
+          </br>
+          <h2>Prices:</h2>
+          <li>Type of Pizza<span class="type-of-pizza"></span></li>
+          <li>Extra Toppings<span class="extraToppings"></span></li>
+          <li>Size<span class="sizeOfPizza"></span></li>
+          <li>Price $<strong><span class="price">0</strong></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
