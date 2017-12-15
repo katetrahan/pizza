@@ -1,11 +1,18 @@
 #show-price {
   display: none;
   background-color: #FAEBD7;
+  padding: 10px;
 }
 
 .jumbotron {
   text-align: center;
-  background-image: url("https://www.vortexglobal.com/wp-content/uploads/2017/10/pepperoni-pizza.jpg")
+  height: 500px;
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-pizza-1498514418.jpg");
+  color: black;
+}
+
+.jumbotron h1 {
+  font-size: 100pt;
 }
 
 button {
@@ -23,7 +30,7 @@ button {
 }
 
 body {
-  background-color:#DEB887;
+  background-color:#a38280;
 }
 
 ul {
@@ -31,13 +38,34 @@ ul {
 }
 
 .type-of-pizza {
-  color: red;
+  color:#670e0e;
   font-style: italic;
-  font-size: 30pt;
+  font-size: 20pt;
 }
 
 .extraToppings {
+  color:#670e0e;
   font-style: italic;
-  font-size: 30pt;
+  font-size: 20pt;
+}
+.moreToppings {
+  color:#670e0e;
+  font-style: italic;
+  font-size: 20pt;
+}
+.sizeOfPizza {
+  color:#670e0e;
+  font-style: italic;
+  font-size: 20pt;
+}
+.price {
+  color:#670e0e;
+  font-style: italic;
+  font-size: 20pt;
+}
 
+.header1 {
+  font-size: 40pt;
+  color:#670e0e;
+  font-style: italic;
 }
