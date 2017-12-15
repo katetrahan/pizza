@@ -1,5 +1,4 @@
 ///business logic
-
 var smallPrice = 8;
 var price = 10;
 var largePrice = 12;
@@ -37,16 +36,15 @@ $(document).ready(function() {
   var finalPrice = newPizza.price();
   $("ul#show-price").append("<li><span class = 'yummypizza'>" + newPizza.main + "<span></li>");
 
-  var result = newPizza.price();
   $("#show-price").show();
-  $("#show-price").append("Your price is: " + "$" + result);
+  $("#show-price").append("Your price is: " + "$" + finalPrice);
   $(".yummypizza").last().click(function() {
     $("show-price").fadeIn();
     $("show-price h2").text(newPizza.main);
     $(".type-of-pizza").text(newPizza.main);
     $(".extraToppings").text(newPizza.extra);
-    $("sizeOfPizza").text(newPizza.size);
-    $("price").text(pizzaPrice);
+    $(".sizeOfPizza").text(newPizza.size);
+    $("price").text(finalPrice);
     });
   });
 });

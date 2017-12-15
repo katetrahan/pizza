@@ -1,3 +1,21 @@
 #show-price {
   display: none;
 }
+
+.jumbotron {
+  text-align: center;
+}
+
+button {
+  margin-left: 15px;
+}
+
+.yummypizza {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.yummypizza:hover {
+  text-decoration: underline;
+  column-rule-color: grey;
+}
