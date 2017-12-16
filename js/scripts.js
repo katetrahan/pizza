@@ -12,6 +12,7 @@ function Pizza(main, extra, more, size) { //constructor
   this.size = size;
 }
 
+
 Pizza.prototype.price = function() { //prototype
   if(this.more === "Yes" &&  this.size === "Small"){
     var pizzaPrice = smallPrice + extraTopping;
@@ -30,12 +31,14 @@ Pizza.prototype.price = function() { //prototype
   } return pizzaPrice; // returns adjusted price
 
 
+
 // Pizza.prototype.topper = function() { // prototype #2
 //   if(this.more === "Pineapple") {
 //     var pizzaPrice = extraTopping
 //   } else if (this.more === "No"){
 //     var pizzaPrice = pizzaPrice
 //   }
+
 }
 
 
@@ -50,9 +53,11 @@ $(document).ready(function() {
   var inputtedMore = $("#moreToppingDropdown").val();
   var inputtedSize = $("input[name=size]:checked").val();
 
+
   var newPizza = new Pizza (inputtedMain,inputtedExtra, inputtedMore,inputtedSize);//instance
   var finalPrice = newPizza.price(); //calls from back end
   $("ul#show-price").append("<li><span class = 'yummypizza'>" + "View Details" + "<span></li>");
+
 
   var result = newPizza.price();
   $("#show-price").show();
@@ -68,6 +73,7 @@ $(document).ready(function() {
   });
   $("#newOrderButton").click(function() {
     $("#show-price").hide();
+    $("show-price").empty(); // empty - not sure exaclty how to use this
   }
 )
   });

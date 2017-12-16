@@ -15,7 +15,7 @@
         </div>
         <!-- <Main Topping> -->
           <div class="col-lg-12">
-            <h3>Pick a topping you would like (main topping):</h3>
+            <h2>Select your main topping:</h2>
             <select class="form-control" id="mainToppingDropdown">
               <option value="Cheese">Cheese</option>
               <option value="Pepperoni">Pepperoni</option>
@@ -26,7 +26,7 @@
         </br>
         <!-- <Extra Topping> -->
           <div class="col-lg-12" id="extraInput">
-          <h3>Get your first topping free!</h3>
+          <h2>Select your free topping:</h2>
           <select class="form-control" id="extraToppingDropdown">
             <option value="Pineapple">Pineapple</option>
             <option value="Jalapenos">Jalapenos</option>
@@ -36,9 +36,9 @@
           </div>
         </br>
         <div class="col-lg-12" id="moreInput">
-        <h3>Want some more toppings? (That'll cost you extra!)</h3>
+        <h2>Want some more toppings? (That'll cost you extra!)</h2>
         <select class="form-control" id="moreToppingDropdown">
-          <option value="No">No Thank You, paying extra is lame</option>
+          <option value="No">No thank you, paying extra is lame</option>
           <option value="Yes">Pineapple</option>
           <option value="Yes">Jalapenos</option>
           <option value="Yes">Extra Cheese</option>
@@ -48,10 +48,10 @@
         </br>
         <!-- <Pizza Size> -->
           <div class="col-lg-12" id="sizeInput">
-          <h3>What size of pizza would you like?</h3>
+          <h2>Please select a size:</h2>
             <input type="radio" name="size" value="Small"> Small<br>
             <input type="radio" name="size" value="Medium"> Medium<br>
-            <input type="radio" name="size" value="Large"> Large</br>
+            <input type="radio" name="size" value="Large" checked="checked"> Large</br>
           </div>
         <!-- <Submit> -->
         </br>
@@ -63,14 +63,14 @@
           </br>
           <h2>Order Receipt:</h2>
           <p class="header1"></p>
-          <li>Type of Pizza <span class="type-of-pizza"></span></li>
-          <li>Free Topping <span class="extraToppings"></span></li>
-          <li>Extra Topping <span class="moreToppings"></span></li>
-          <li>Size <span class="sizeOfPizza"></span></li>
-          <li>Price <strong><span class="price"></strong></li>
+          <li>Type of Pizza <strong><span class="type-of-pizza"></span></strong></li>
+          <li>Free Topping <strong><span class="extraToppings"></span></strong></li>
+          <li>Extra Topping <strong><span class="moreToppings"></span></strong></li>
+          <li>Size <strong><span class="sizeOfPizza"></span></strong></li>
+          <li>Price $<strong><span class="price"></span></strong></li>
         </ul>
       </div>
-      <button class="btn btn-primary" id="newOrderButton">New Order</button>
+      <button class="btn btn-primary" id="newOrderButton">Add Order</button>
     </div>
   </body>
 </html>

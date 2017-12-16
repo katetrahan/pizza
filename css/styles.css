@@ -2,6 +2,7 @@
   display: none;
   background-color: #FAEBD7;
   padding: 10px;
+  font-size:16pt;
 }
 
 .jumbotron {
@@ -22,6 +23,7 @@ button {
 .yummypizza {
   cursor: pointer;
   color: #0088cc;
+  font-size:24pt;
 }
 
 .yummypizza:hover {
